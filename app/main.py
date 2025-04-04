@@ -3,9 +3,11 @@ import chainlit as cl
 import google.generativeai as genai
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv() # for loading environment variables
+# Load environment variables from .env file
 
-gemini_api = os.getenv("GEMINI_API_KEY")
+gemini_api = os.getenv("GEMINI_API_KEY") # for google genai api
+
 genai.configure(api_key=gemini_api)
 
 model = genai.GenerativeModel(
